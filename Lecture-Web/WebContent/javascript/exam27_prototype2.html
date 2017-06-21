@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var now = new Date();
+	
+	// console.log(now);
+	
+	Date.prototype.today= function(){
+		var year = this.getFullYear();
+		var month = this.getMonth()+1;
+		var date = this.getDate();
+		var day = this.getDay();   // 0(일)~6(토)
+		var week = ["일","월","화","수","목","금","토"];
+		
+		return "오늘은 "+year+"년 "+month+"월 "+date+"일 "+week[day]+"요일 입니다.";
+	}
+	
+	// 오늘은 2017년 6월 2일 금요일입니다.
+	console.log(now.today());
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function Person(name, phone, addr){
+		this.name = name;
+		this.phone = phone;
+		this.addr = addr;
+	}
+	
+	Person.prototype.info = function(){
+		var list = '';
+		for(var key in this){
+			if(key != 'info'){
+				list += key+": "+this[key]+'\n';
+			}
+		}
+		console.log(list);
+	}
+	
+	Person.prototype.hobby = "영화";
+	
+	Doctor.prototype = Person.prototype;
+	
+	function Doctor(major){
+		this.major = major;
+	}
+	
+	var person = new Person("이름","1111","주소1");
+	person.info();
+	
+	var doctor = new Doctor("신경외과");
+	doctor.info();  // prototype이 복사되었기 때문에 가능
+	
+	console.log(person instanceof Person);
+	console.log(doctor instanceof Doctor);
+	console.log(doctor instanceof Person);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	// name, phone, addr 요소를 가지는 person 객체
+	// 요소명은 "" 생략할 수 있다.
+	var person = {
+		"name": "홍길동",
+		"phone" : "010-0000-0000",
+		addr : "서울시 서ㅗ구",
+		num : 4,
+		"info" : function(){
+			
+			// 요소명 쓸 때 소속을 밝혀야함 - this
+			/* console.log("name: "+name+"\n"+
+					"phone: "+this.phone+'\n'+
+					"addr: "+this.addr+"\n"); */
+				
+			/* var msg = "";
+			with(this){
+				msg += "name: " + name + '\n';
+				msg += "phone: " + phone + '\n';
+				msg += "addr: " + addr + '\n';
+				
+				console.log(msg);			
+			} */
+			
+			for(key in this){
+				console.log(key+": "+this[key]);
+				
+			}
+		}
+	};
+	
+	person.info();
+	
+	console.log("***********************************");
+	with(person){
+		console.log("with(person)\n");
+		info();
+	}
+	
+	console.log("***********************************");
+	console.log("person.info()\n");
+	person.info();
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+</head>
+<body>
+	<form action="http://www.naver.com"> <!-- submit 누르면 요청하는 url -->
+		아이디: <input type="text" size="10" /><br/>
+		패스워드: <input type="password" size="10"/><br/><br/>
+		
+		<strong>희망연봉</strong><br/>
+		
+		<input type="radio" name="sal" />2200-2400<br/>
+		<input type="radio" name="sal"/>2400-2600<br/>
+		<input type="radio" name="sal"/>2600-2800<br/>
+		<input type="radio" name="sal"/>2800-3000<br/>
+		<input type="radio" name="sal"/>3000이상<br/>
+		<br/>
+		
+		<strong>사용 가능 언어(중복 선택 가능)</strong><br/>
+		<input type="checkbox" name="lang"/>C언어<br/>
+		<input type="checkbox" name="lang"/>JAVA<br/>
+		<input type="checkbox" name="lang"/>C++<br/>
+		<input type="checkbox" name="lang"/>C#<br/>
+		<input type="checkbox" name="lang"/>JSP<br/>
+		<input type="checkbox" name="lang"/>PHP<br/>
+		<input type="checkbox" name="lang"/>ASP<br/>
+		<br/>
+
+		<strong>취미 선택(중복 선택 가능)</strong><br/>
+		<input type="checkbox" name="hob"/>1<br/>
+		<input type="checkbox" name="hob"/>2<br/>
+		<input type="checkbox" name="hob"/>3<br/>
+		<input type="checkbox" name="hob"/>4<br/>
+		<input type="checkbox" name="hob"/>5<br/>
+		<br/>
+		
+		자기소개: <textarea rows="10" cols="50">text</textarea><br/><br/>
+		첨부파일: <input type="file" size="50" /><br/>
+		
+		<input type="submit" value="전송"/>
+		<!-- http://localhost:8000/Lecture-Web/html/form/exam01.html?
+			sal=on&lang=on&lang=on&lang=on&hob=on&hob=on  -->
+	</form>
+</body>
+</html>

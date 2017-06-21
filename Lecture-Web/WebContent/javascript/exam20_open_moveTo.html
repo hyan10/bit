@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 
+	브라우져 객체 모델 (BOM)
+	
+	window객체
+		- location (path)
+		- navigator
+		- history
+		- screen (x,y,width,height)
+		- document (body)
+		
+ */
+ 
+ 	window.alert('window 객체다');
+ 	var sub = window.open('','','width=400, height=500');
+ 	if(!sub){
+ 		alert('팝업창 옵션을 확인하세요.');
+ 	}else {
+ 		console.log(sub);
+ 		sub.moveTo(100,100);  // 위치 좌표로 이동
+ 		setInterval(function(){  // 1초마다 함수 수행해라
+ 			sub.moveBy(10,10); // 현재 위치에서 이동	
+ 		},1000);
+ 	}
+ 
+</script>
+</head>
+<body>
+
+</body>
+</html>

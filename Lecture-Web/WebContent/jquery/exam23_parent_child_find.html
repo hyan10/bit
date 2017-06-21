@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#ancester * {
+		border: 1px solid red;
+		display: block;
+		padding: 10px;
+		margin: 10px;
+	}
+	
+</style>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		// 내 부모
+	//	$('span').parent().css('border','1px solid blue');
+	
+		// 부모의 부모
+	//	$('span').parent().parent().css('border', '1px solid blue');
+	
+	  // 내 부모부터 html 태그(끝)까지 모든 부모
+	//	$('span').parents().css('border','1px solid blue');
+	  
+	  // id가 ancester인 div는 기존`에 선이 없었지만 부모에 해당하여 선이 생긴다.
+	//	$('span').parents('div').css('border','1px solid blue');
+	  
+	  // 부모 중 div를 만나기 전까지
+	//	$('span').parentsUntil('div').css('border', '1px solid blue');
+	  
+	  // 자식 div 2개 선
+//	$('#ancester').children().css('border','1px solid blue');
+	  
+	  // 자식 중 id가 div02인것
+//	$('#ancester').children("#div02").css('border','1px solid blue');
+	  
+	  // 자식 중 ul 태그인 것 - 없다.
+//	$('#ancester').children("ul").css('border','1px solid blue');
+	  
+	  // 후손들 중 ul 찾기
+//  $('#ancester').find('ul').css('border', '1px solid blue');
+	  
+	  // 모든 후손
+//	  $('#ancester').find('*').css('border', '1px solid blue');
+//	  $('#ancester').find('div, ul').css('border', '1px solid blue');
+//	  $('#ancester').find('#div01, li').css('border', '1px solid blue');
+	  
+	  // 자식 중 마지막애  - #div02
+	  $('#ancester').children().last().css('border', '1px solid blue');
+	  
+	  // 후손들 중 첫번째 div  - #div01
+	  $('#ancester').find('div').first().css('border', '1px solid blue');
+		
+
+	});
+</script>
+</head>
+<body>
+	<div id="ancester">
+		<div id="div01">div1
+			<ul>ul
+				<li>li
+					<span>span</span>
+				</li>
+			</ul>
+		</div>
+		<div id="div02">div2
+			<p>p
+				<span>span</span>
+			</p>
+		</div>
+	</div>
+
+</body>
+</html>

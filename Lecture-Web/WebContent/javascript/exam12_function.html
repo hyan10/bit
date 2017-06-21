@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function testFunction() {
+		console.log('call'+"\n");
+	}
+	
+	function testFunction(data){
+		console.log('data: '+data+"\n");
+	}
+
+	function testFunction(a,b){
+		console.log('a: '+a+' b: '+b+"\n");
+	}
+	
+	function sum(a,b){
+		// exam_29_extends - call test (this 추가)
+		this.a = a;
+		this.b = b;
+		return a+b;
+	}
+	
+	var temp = function func(){
+					console.log('call func()\n');
+				}
+	
+	var func01 = function(){
+					console.log('call func1()\n');
+				}
+	
+	function callFunction(f){
+		f();
+	}
+	
+	function getSum(a,b){
+		var s = 0;
+		while(a<=b){
+			s+=a++;
+		}
+		return s;
+	}
+	
+	function printSum(a,b){
+		// printSum() 내부에서만 사용 가능. 내부 sum() 호출, 외부 sum() x
+		function sum(a,b){
+			var s = 0;
+			while(a<=b){
+				s+=a++;
+			}
+			return s;
+		}
+		
+		console.log('내부 sum='+sum(a,b)+'\n');
+		console.log('외부 window.sum='+window.sum(a,b)+'\n');
+		
+		// exam_29_extends - call test
+		var obj = {};
+		var sum = window.sum.call(obj,100,b);
+		console.log('외부 window.sum='+(obj.a+obj.b)+'\n');
+	}
+	
+	
+	printSum(1,10);
+	
+	callFunction(func01);
+	callFunction(testFunction);
+	
+	// func();
+	temp(); // temp가 func()함수를 가짐. 그래서 func은 보통 생략함
+	func01();
+	
+	var total = sum(10,20);
+	console.log("합: "+total+"\n");
+	
+	
+	//testFunction();
+	testFunction(10);
+	testFunction('A','B');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

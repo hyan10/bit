@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.bx-wrapper .bx-pager {
+    bottom: -95px;
+  }
+  
+  .bx-wrapper .bx-pager a {
+    border: solid #ccc 1px;
+    display: block;
+    margin: 0 5px;
+    padding: 3px;
+  }
+  
+  .bx-wrapper .bx-pager a:hover,
+  .bx-wrapper .bx-pager a.active {
+    border: solid #5280DD 1px;
+  }
+  
+  .bx-wrapper {
+    margin-bottom: 120px;
+  }
+</style>
+<!-- jQuery library (served from Google) -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="js/jquery.bxslider.css" rel="stylesheet" />
+<script>
+
+// www.bxslider.com
+
+	$(document).ready(function(){
+	  $('.bxslider').bxSlider({
+		  auto: true,
+		//  autoControls: true
+		
+		  buildPager: function(slideIndex){
+			    switch(slideIndex){
+			      case 0:
+			        return '<img src="../img/image01.jpg">';
+			      case 1:
+			        return '<img src="../img/image02.jpg">';
+			      case 2:
+			        return '<img src="../img/image03.jpg">';
+			      case 3:
+			    	return '<img src="../img/image04.jpg">';
+			    }
+			  }
+	  })
+	});
+</script>
+</head>
+<body>
+	<ul class="bxslider">
+	  <li><img src="../img/image01.jpg" /></li>
+	  <li><img src="../img/image02.jpg" /></li>
+	  <li><img src="../img/image03.jpg" /></li>
+	  <li><img src="../img/image04.jpg" /></li>
+	</ul>
+</body>
+</html>

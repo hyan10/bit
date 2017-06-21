@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		// var id = document.getElementById('id');
+		var id = document.querySelector("#id");  // #:id속성
+		id.innerHTML = '아이디1';
+		
+		var pw = document.querySelector(".pw");  // .:class속성
+		pw.innerHTML = '패스워드';
+	}
+
+</script>
+</head>
+<body>
+
+	<table width="100" height="100" border="1">
+	
+		<tr>
+			<td id="id">ID</td>
+		</tr>
+		
+		<tr>
+			<td class="pw">PASSWORD</td>
+		</tr>
+		
+	
+	</table>
+
+</body>
+</html>

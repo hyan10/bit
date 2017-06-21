@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>음성파일</title>
+</head>
+<body>
+	HTML5 전 버전: <embed src="playlist/kalimba.mp3" /><br/>
+	
+	HTML5 버전:
+		<audio src="playlist/kalimba.mp3" controls="controls" autoplay="autoplay"></audio>
+	
+	<br/>
+	
+	HTML5 전 버전 embed tag 사용<br/>
+	<embed src="playlist/movie.mp4" /><br/>
+
+	HTML5 버전 object tag 사용<br/>
+	<object data="playlist/movie.mp4"></object><br/>
+	
+	HTML5 버전: video tag 사용 <br/>
+	<video src="playlist/movie.mp4" controls="controls"
+			width="500" height="300"></video>
+			
+	<video controls="controls"
+			width="500" height="300">
+			<source src="playlist/movie.mp4"/></video>
+	
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+	h1:first-of-type {
+		color: orange;
+	}
+
+	h1:last-of-type {
+		color: green;
+	}
+	
+	
+	h2:first-child {  /* 같은 계층에서 맨 첫번째가 h2이면 */
+		color: red;
+	}
+	
+/* 	p::FIRST-LETTER {
+		font-size: xx-large;
+	} */
+	
+	p::FIRST-LETTER {
+		font-size: 2em;
+	}
+	
+	p::FIRST-LINE {
+		text-decoration: underline;
+	}
+	
+	p::selection{  /* 드래그하면 */
+		background: yellow;
+	}
+
+</style>
+
+</head>
+<body>
+	<p>
+		ABCDEFGHIJKLMN<br/>
+		OPQRSTUVWXYZ
+	</p>
+	
+	<p>
+		agkdnvaldfjalgjldafb<br/>
+		dafkjlkdsjfkjag<br/>
+		fjakldapoepeeeegjg
+	</p>
+
+	<h1>Header1</h1>
+	<h2>Header2</h2>
+	<h3>Header3</h3>
+	<h4>Header4</h4>
+	<h1>Header1</h1>
+	<h6>Header6</h6>
+	
+	<div>
+		<h2>Sub2</h2>
+		<h1>Sub1</h1>
+	
+	</div>
+</body>
+</html>

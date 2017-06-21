@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		
+	/*
+		var pTag = document.getElementsByTagName("p");		
+		var html = pTag[0].innerHTML;
+		var text = pTag[0].innerText;
+	*/
+		 
+		var pTag = document.querySelectorAll("p");
+		console.log(pTag);
+		
+		var html = $('p').html();
+		var text = $('p').text();
+		
+		console.log(html+'\n'+text);
+		
+		// var attr = document.querySelector('a');$('a').
+		
+		var aTag = document.querySelector('a');
+		var attr = aTag.getAttribute('href');
+		
+		console.log('추출된 주소: '+attr+'\n');
+		
+		
+		function clickEvent() {
+			var inputTag = document.getElementById("name");
+			var name = inputTag.value;
+			alert('추출된 이름 : ' + name + '\n');
+
+		}
+		
+		$(':button').click(function(){
+			var name = $('#name').val();  // .val("값");  // 변경됨
+			console.log(name);
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<p>내이름은 <b>홍길동</b>이고, 별명은 <i>의적</i>입니다.</p>
+	<p>내이름은 <b>홍길순</b>이고, 별명은 <i>의적2</i>입니다.</p>
+	<a href="http://www.naver.com">네이버로 이동</a>
+	이름 : <input id="name" type="text" size="20" />
+	<button>입력완료</button>  <!-- onclick="clickEvent()" -->
+	
+</body>
+</html>

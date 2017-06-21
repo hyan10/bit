@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var d = new Date();
+	var hour = d.getHours();
+	
+	document.write(d+'<br/>');
+	document.write(hour+'시<br/>');
+	
+	if(hour<12){
+		document.write('오전<br/>');
+	} else if(hour<16){
+		document.write('오후<br/>');
+	} else {
+		document.write('저녁<br/>');
+	}
+	
+</script>
+</head>
+<body>
+	
+</body>
+</html>

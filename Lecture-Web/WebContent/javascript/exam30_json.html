@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 
+	JSON.stringify()	// 자바스크립트 객체 값을 문자열로 변환
+	JSON.parse()		// 문자열을 자바스크립트 객체 값으로 변환
+ */
+ 
+ var person = {
+		"name" : "홍길동",
+		"phone": "101011",
+		"addr": "주소"
+};
+ 
+ var person1 = {
+		name : "홍길동",
+		phone: "101011",
+		addr: "주소"
+};
+
+	var strPerson = JSON.stringify(person);
+	var obj = JSON.parse(strPerson);
+	console.log(typeof person);
+	console.log(typeof strPerson);
+
+	console.log(strPerson);
+	console.log(obj.name+"\n");
+	console.log(obj.phone+"\n");
+	console.log(obj.addr+"\n");	
+	
+	var strPerson1 = JSON.stringify(person1);
+	var obj1 = JSON.parse(strPerson1);
+	console.log(typeof person1);
+	console.log(typeof strPerson1);
+
+	console.log(strPerson1);
+	console.log(obj1.name+"\n");
+	console.log(obj1.phone+"\n");
+	console.log(obj1.addr+"\n");	
+	
+	var person2 = "{name:'홍길동', age:'25', addr:'서울'}";
+	var strPerson2 = JSON.stringify(person2);
+	var obj2 = JSON.parse(strPerson2);
+	console.log(typeof person2);
+	console.log(typeof strPerson2);
+	console.log(person2);
+	console.log(strPerson2);
+	
+	var str = "{\"name\":\"홍길동\",\"age\":25}";
+	console.log(str);
+	//console.log(eval(str));
+	console.log(JSON.parse(str));
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+/* 		console.log(document.body.innerHTML); */
+		var header1 = document.getElementById("header1");
+		alert(header1);  // object라고밖에 안보임
+		console.log(header1);
+		console.log(header1.innerHTML);
+		header1.innerHTML = 'javascript';  // <h1>의 inner 이므로 <h1> 태그 내의 값만 의미함
+		console.log(header1.innerHTML);
+		
+	}
+</script>
+</head>
+<body>
+	<h1 id="header1">Header1</h1>
+	<h1>Header2</h1>
+</body>
+</html>

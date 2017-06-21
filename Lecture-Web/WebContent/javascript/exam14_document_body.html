@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// html 해석이 다 끝나면 자동으로 호출되는 함수 (onload)
+	window.onload = function() {
+		alert('innerHTML:\n'+document.body.innerHTML);	
+		console.log('innerHTML:\n'+document.body.innerText);
+		
+		var list = '';
+		list += '<ul>';
+		list += '<li>aaa</li>';
+		list += '<li>bbb</li>';
+		list += '<li>ccc</li>';
+		list += '</ul>';
+		list += '응';
+		
+		// hello 보였다가 해석 후에 list 값으로 바꾼 후 출력됨
+		// 익플로 alert 전 후로 확인 가능
+	//	document.body.innerHTML = list;  // 태그 해석 후 출력
+	//	document.body.innerText = list;  // 문자열로 모두 출력
+		
+	//	document.body.innerHTML += list;
+	
+		document.body.innerHTML += '<br/>';
+		document.body.innerText += list; // 기존 내용도 문자열로 바뀌어서 태그 인식 못함
+	}
+</script>
+</head>
+<body>
+	hello<br/>
+	<h2>환영합니다.</h2><br/>
+</body>
+</html>

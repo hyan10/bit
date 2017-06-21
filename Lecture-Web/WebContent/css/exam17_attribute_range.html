@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h1 ~h2 { /* h1기준으로 다음에 있는 모든 h2 */
+		color: red;
+	}
+	
+	h1+h2 { /* h1 바로 밑에 있는 h2만 */
+		color: orange;
+	}
+	
+	
+</style>
+</head>
+<body>
+	<h2>Header2-1</h2>
+	<h1>Header1</h1>
+	<h3>Header3-1</h3>
+	<h2>Header2-2</h2>
+	<h2>Header2-3</h2>
+	<h2>Header2-4</h2>
+	<h1>Header1</h1>
+	<h2>Header2-1</h2>
+	<h2>Header2-2</h2>
+</body>
+</html>

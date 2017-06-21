@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {
+		width: 100px;
+		height: 100px;
+		background: red;
+		position:absolute;   /* default는 static이라 위치 조정 불가능하므로 다른 값으로 바꿔줘야함 */ 
+	}
+	
+</style>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		// 1. width 먼저 바뀌고
+		$('div').animate({
+			'width':'200px'
+		});
+				
+		// 2. 다음 animation 실행된다. - 옆으로 이동, 투명도 조절은 동시에 일어난다.
+		$('div').animate({
+			'left':'100px',
+			'opacity': '0.6'
+		},2000);
+		
+		$('div').animate({
+			'width':'100px',
+			'height':'200px',
+			'opacity':'0.3'
+		}, 3000);
+		
+		$('div').animate({
+			'height':'100px',
+			'left' : '0px',
+			'top': '100px',
+			'opacity':'1'
+		},2000);
+		
+	}, function(){
+		$(this).css('background-color', 'pink');
+	});
+</script>
+
+</head>
+<body>
+<!-- 	<div style="width:100px; height: 100px; display: background: red;"></div> -->
+	<br/>
+	<div></div>
+</body>
+</html>

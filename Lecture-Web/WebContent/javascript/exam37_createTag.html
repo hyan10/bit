@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	window.onload = function(){
+		var tag = document.createElement('h1');
+		var tagText = document.createTextNode("2. Hello");
+		
+		tag.appendChild(tagText);
+		document.body.appendChild(tag);
+		
+		var imgTag = document.createElement('img');
+		imgTag.setAttribute('src', 'buller.gif');
+		
+		document.body.appendChild(imgTag);
+		
+		var imgLinkTag = document.createElement("a");
+		imgLinkTag.setAttribute('href','http://www.naver.com');
+		imgLinkTag.setAttribute('target', '_blank');
+		
+		imgLinkTag.appendChild(imgTag);
+		
+		document.body.appendChild(imgLinkTag);
+		
+	};
+	
+</script>
+</head>
+<body>
+	<h1>1. Hello</h1>
+	<img src = "../css/images/aaa.png"/>
+</body>
+</html>

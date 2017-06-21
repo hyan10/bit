@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script> -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script> <!-- 1 버전 애들임 -->
+<script>
+	// 비동기로 서버에 param3.jsp?name=홍길동&age=25 요청
+	$(document).ready(function(){
+		$('button').click(function(){
+			 $.ajax({
+				url: "param3.jsp",
+				type: "get",
+			//	data: 'name=홍길동&age=25',
+				data: {'name': $('#name').val(), 'age': $('#age').val()},
+				success: callback
+			});
+			
+/* 			$.post({
+				url: "param3.jsp",
+				data: {'name': $('#name').val(), 'age': $('#age').val()},
+				success: callback
+			}); */
+			
+		});
+	});
+	
+	function callback(data){
+		alert("수신 성공");
+		// $('#debug').val(data);
+		$('#debug').append(data);
+	}
+	
+</script>
+</head>
+<body>
+	<textarea rows="10" cols="80" id="debug"></textarea><br/>
+	이름: <input type="text" id="name" name="name"/>
+	나이: <input type="text" id="age" name="age"/>
+	<button>호출</button>
+</body>
+</html>

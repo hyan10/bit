@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {
+		width: 100px;
+		height: 100px;
+		background: red;
+		display:none;
+		position:absolute;   /* default는 static이라 위치 조정 불가능하므로 다른 값으로 바꿔줘야함 */ 
+	}
+	
+</style>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+		$('div').animate({
+			'width' : 'toggle',
+			'height' : 'toggle',
+			'left' : '100px',
+			'right' : '100px',
+			'opacity' : '0.2'
+		});
+/* 
+		$('div').animate({
+			'width' : '+=200px',
+			'height' : '200px',
+			'background' : 'yellow'
+		});
+ */	});
+</script>
+
+</head>
+<body>
+<!-- 	<div style="width:100px; height: 100px; display: background: red;"></div> -->
+	<br/>
+	<div></div>
+</body>
+</html>

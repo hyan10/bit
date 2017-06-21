@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var sub = window.open("","","width=400, height=300");
+	
+	// 화면 크기 가져오기
+	var width = screen.width;
+	var height = screen.height;
+	
+	sub.moveTo(0,0);
+	sub.resizeTo(width, height);
+	
+	var cnt = 0;
+	var id = setInterval(function(){
+		sub.resizeBy(-30, -30);  // -30씩 크기 변경
+		sub.moveBy(10,10);
+		
+		if(++cnt==3){
+			clearInterval(id);  // interval 멈추기
+		}
+	}, 1000);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

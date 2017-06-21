@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var state = new Array();
+	
+	state[0] = '서울';
+	state[1] = '부산';
+	
+	state['서초'] = '서울';
+	state['동래'] = '부산';
+	
+	// state['둔산'] = '대전';
+	state.둔산 = '대전';   // 접근 가능
+	
+	for(var index in state){
+		document.write(index + ': ' + state[index] + '<br/>');
+	}
+	
+	document.write('<br/>');
+	
+	var person = [];
+	person['name']='홍길동';
+	person['phone']='010-1111-1111';
+	person['addr']='서울';
+	
+	for(var key in person){
+		document.write(key+': '+person[key]+'<br/>');
+	}
+	
+	document.write('<br/>');
+	document.write('name: '+person.name+'<br/>');
+	document.write('phone: '+person.phone+'<br/>');
+	document.write('addr: '+person.addr+'<br/>');
+
+</script>
+</head>
+<body>
+	
+</body>
+</html>

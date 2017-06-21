@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	body * {
+		border: 1px solid red;
+		display: block;  /* 영역 설정 */
+		padding: 10px;
+		margin: 10px;
+	}
+</style>
+<title>Insert title here</title>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		// 나와 같은 레벨 모두 (나 제외)  - 양 옆 모두 체크  (next+prev 인듯)
+	//	$('h2').siblings().css('border', '1px solid blue');
+		
+		// 나와 같은 레벨 중 h3 태그
+//		$('h2').siblings('h3').css('border', '1px solid blue');
+		
+//		$('h3').next().css('border', '1px solid blue');
+//		$('h3').prev().css('border', '1px solid blue');
+//		$('h1').nextUntil('p').css('border', '1px solid blue');
+//		$('h1').prevUntil('p').css('border', '1px solid blue');
+//		$('h2').nextAll().css('border','1px solid blue');
+//		$('h2').prevAll().css('border','1px solid blue');
+		
+		// h2 - p 쌍으로 나오는 p  -- 없음
+		$('h2').next('p').css('border', '1px solid blue');
+		
+		// h2 - h3 쌍으로 나오는 h3
+//		$('h2').next('h3').css('border', '1px solid blue');
+//		$('h2+h3').css('border', '1px solid blue');
+
+		// 0번부터 시작, div[1]
+//		$('div').eq(1).css('border','1px solid blue');
+		
+		// 모든 div 합쳐서 6번째  - 각 div 아님!
+//		$('div>*').eq(6).css('border','1px solid blue');
+
+		// 모든 div 합쳐서 0번째 p
+//		$('div>p').eq(0).css('border','1px solid blue');
+
+		// 모든 div에서 p가 아닌것
+//		$('div>*').not('p').css('border','1px solid blue');
+		
+		// 모든 div에서 p인 것 모두
+//		$('div>*').filter('p').css('border','1px solid blue');
+		
+		
+		
+	});
+</script>
+
+</head>
+<body>
+	<div>div1
+		<p>p1-1</p>
+		<span>span</span>
+		<h1>h1</h1>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<p>p1-2</p>
+	</div>
+	<div>div2
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<p>p2-1</p>
+
+	</div>
+
+</body>
+</html>

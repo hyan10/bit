@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		// elements! 배열로 반환
+		var node = document.getElementsByTagName('td');
+		node[0].innerHTML = '아이디(getElementsByTagName)';
+
+		var node1 = document.querySelectorAll('td');
+		node1[1].innerHTML = '비번(querySelectorAll)';
+		
+		/* 
+			querySelector(태그명) : 맨처음으로 검색된 tag 원소 반환
+			querySelectorAll(태그명) : tag명에 해당하는 모든 태그 반환
+		*/
+	}
+
+</script>
+</head>
+<body>
+
+	<table width="100" height="100" border="1">
+	
+		<tr>
+			<td >ID</td>
+		</tr>
+		
+		<tr>
+			<td >PASSWORD</td>
+		</tr>
+		
+	
+	</table>
+
+</body>
+</html>

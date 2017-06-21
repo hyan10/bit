@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function makePerson(name, phone, addr){
+		var person = {
+				"name" : name,
+				"phone" :phone,
+				"addr" : addr,
+				
+				"info" : function(){
+					var list = '';
+					for(var key in this){
+						if(key != 'info'){
+							list += key+": "+this[key]+'\n';
+						}
+					}
+					console.log(list);
+				}
+		}
+		
+		return person;
+	}
+	
+	var person = makePerson("홍","11","주소");
+	person.info();
+	
+	var persons = [];
+	persons.push(makePerson("이름1","111222","주소1"));
+	persons.push(makePerson("이름2","113322","주소2"));
+	persons.push(makePerson("이름3","114422","주소3"));
+	
+	for(var i in persons){
+		persons[i].info();
+	}
+	
+</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		alert('ready');
+		
+		$('tr').css('background', 'yellow');  // 속성, 값	
+//		$('tr:even').css('background', 'green');
+		$('tr:odd').css('background', 'green');
+		$('tr:nth-child(2n+3)').css('background', 'red');  // even
+		
+	});
+</script>
+</head>
+<body>
+	<h2>회원명부</h2>
+	<table border="1">
+		<tr>
+			<th>이름</th>   <!-- th: bold, 가운데정렬 -->
+			<th>전화번호</th>   <!-- th: bold, 가운데정렬 -->			
+		</tr>
+		
+		<tr>
+			<td>가</td>
+			<td>0102020</td>
+		</tr>
+		
+		<tr>
+			<td>나</td>
+			<td>11322</td>
+		</tr>
+		
+		<tr>
+			<td>다</td>
+			<td>2245344</td>
+		</tr>
+		
+		<tr>
+			<td>라</td>
+			<td>33112</td>
+		</tr>
+		
+		<tr>
+			<td>마</td>
+			<td>4445682</td>
+		</tr>
+					
+	
+	</table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	/* ++num;  // 전위가 조금 더 빠름
+	num++; */
+	
+	var a = 1;
+	var b = -1;
+	var c = 0;
+	var d = ++a || ++b && ++c;  // (++b && ++c) 로 묶이지만 왼쪽부터 수행됨
+								// 2 || 인 순간 뒷문장 실행하지 않는다.
+	
+	document.write('a: '+a+'<br/>'+' b: '+b+'<br/>'+' c: '+c+'<br/>'+' d: '+d+'<br/>');
+	// 2 -1 0 true
+	
+	var a,b,c;
+	
+	c = b!=0 && (a%b==0);  // if(b!=0) c=(a%b==0);
+						   // else c=false; 
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

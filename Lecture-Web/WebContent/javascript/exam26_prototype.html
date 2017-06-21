@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function Person(name, phone, addr){
+		this.name = name;
+		this.phone = phone;
+		this.addr = addr;
+	}
+	
+	var person = new Person("이름1","1111","주소1");
+	console.log(person);
+	
+	Person.prototype.info = function(){
+		var list = '';
+		for(var key in this){
+			if(key != 'info'){
+				list += key+": "+this[key]+'\n';
+			}
+		}
+		console.log(list);
+	};
+	
+	person.info();
+	
+	var p = new Person("가나다","111121334", "어디");
+	p.info();
+	
+	// info 재정의
+	Person.prototype.info = function(){
+		console.log('change');
+	}
+	
+	var p2 = new Person("바뀐애","2-12", "주소");
+	p2.info();
+	
+	p.info();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

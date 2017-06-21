@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('img').first().css('border','5px solid red');
+		$('img').last().css('border','5px solid aqua');
+		$('img').eq(2).css('border','5px solid yellow');
+		$('.img2').css('border','5px solid orange');
+		
+		$('button').click(function(){
+			// 이동
+			$('img').first().appendTo($('body'));
+			$('.img2').prependTo($('body'));
+		});
+		
+	});
+</script>
+<style type="text/css">
+	img {
+		width: 200px;
+	}
+</style>
+</head>
+<body>
+	<button>클릭</button>
+	<br/><br/>
+	<img src="img/image01.jpg" />
+	<img class="img2" src="img/image02.jpg" />
+	<img src="img/image03.jpg" />
+	<img src="img/image04.jpg" />
+	
+</body>
+</html>

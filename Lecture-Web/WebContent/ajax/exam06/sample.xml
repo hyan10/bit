@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<members>
+
+	<member>
+		<id>hong</id>
+		<name>홍</name>
+	</member>
+
+	<member>
+		<id>koo</id>
+		<name>구</name>
+	</member>
+
+	<member>
+		<id>han</id>
+		<name>한</name>
+	</member>
+
+</members>

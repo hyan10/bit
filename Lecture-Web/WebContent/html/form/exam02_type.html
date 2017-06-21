@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form2</title>
+</head>
+<body>
+	<form>
+		이메일: <input type="email" size="40"/><br/>
+		블로그: <input type="url" size="40"/><br/>
+		전화번호: <input type="tel" size="40"
+				pattern="(010|011|016|017|018|019)-\d{3,4}-\d{4}"
+				placeholder="xxx-xxxx-xxxx 형식으로 입력해주세요." /><br/>
+				
+		<!-- search vs text - 한번에 지우는 x 존재 여부 있음 vs 없음-->
+		검색어: <input type="search"/><br/>
+		수량: <input type="number" min="1" max="10" /><br/>
+		범위: <input type="range" min="0" max="10" step="2"/><br/>
+		날짜: <input type="date" value="2017-05-31"
+					 min="2017-01-01" max="2017-12-31"/><br/>
+		색상: <input type="color" /><br/>
+		
+		<input type="submit" value="전송"> 
+		
+	</form>
+</body>
+</html>

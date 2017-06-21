@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var nums = [10,20,30,40,50];
+	
+	/////////////////////////////////////////// for문
+	for(var i=0; i<nums.length; i++){
+		document.write(i+'번째 변수: '+nums[i]+'<br/>');
+	}
+	document.write('<br/>');
+	
+	for(var i in nums){
+		document.write(i+'번째 변수: '+nums[i]+'<br/>');
+	}
+	document.write('<br/>');
+	
+	
+	/////////////////////////////////////////// forEach()
+	nums.forEach(function(a,b,c) {
+		// a: 값, b: 인덱스, c: 배열 (생략가능)
+		document.write(a+', '+b+', '+c+', '+'<br/>');
+	});
+	document.write('<br/>');
+	
+	nums.forEach(function(a,b) {
+		// a: 값, b: 인덱스
+		document.write(a+', '+b+'<br/>');
+	});
+	document.write('<br/>');
+	
+	nums.forEach(function(a) {
+		// a: 값, b: 인덱스
+		document.write(a+'<br/>');
+	});
+	document.write('<br/>');
+
+	nums.forEach(function() {
+		// a: 값, b: 인덱스
+		document.write("나오나<br/>");
+	});
+	document.write('<br/>');
+
+	nums.forEach(function(element,index,nums) {
+		document.write(index+'번째 변수: '+element+'<br/>');
+	});
+	document.write('<br/>');
+	
+	
+	/////////////////////////////////////////// map
+	
+	/*	
+		var copyNums = [];
+		for(var i=0; i<nums.length; i++){
+			copyNums[i] = nums[i] + 100;
+		} 
+		document.write("nums: "+nums+"<br/>");
+		document.write("copyNums: "+copyNums+"<br/>");
+	*/
+	
+	// var copyNums = nums;  // 같은 곳을 가리킴
+	
+	// map으로 쓰면 복사본이 만들어진다.
+	var copyNums = nums.map(function(element){
+		return element+100;
+	});
+	
+	document.write("nums2: "+nums+"<br/>");
+	document.write("copyNums2: "+copyNums+"<br/>");
+	
+	var num = 1;
+	var copyNum = num.map(function(element){
+		return element+100;
+	});
+	
+	document.write("num: "+num+"<br/>");
+	document.write("copyNum: "+copyNum+"<br/>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

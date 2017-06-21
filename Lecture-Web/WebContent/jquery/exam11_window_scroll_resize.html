@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- 버전 다르면 임의변수 정의해서 $ 대신 씀으로써 충돌을 방지한다.
+	<script>
+		var jqueryV1 = .no (true);
+		jqeryV1(window).load(~~~);  // V1 - 두번재 선언한 js 1.11버전을 지칭
+		$(window).load(~~~);  // $ - 3.2.1 버전을 지칭
+	</script>
+ -->
+<script>
+
+	$(window).load(function(){ // 1.11 버전에서만 수행됨
+		alert('load');
+	});
+
+	$(window).resize(function() {
+		console.log("resize");
+	});
+	
+	$(window).scroll(function() {
+		console.log("scroll");
+	});
+
+	
+</script>
+</head>
+<body>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		alert('ready');
+	//	$("input:button").hide();   // input 태그의 button
+	//	$(":button").hide();		// button 속성을 가진애
+	//	$("button").hide();			// button 태그
+	
+	
+	// onclick 부분에 들어갈 내용 - click이 되면 function(콜백함수)를 실행한다.
+	$("input:button").click(function(){
+		$(this).hide();
+	});  
+	
+	
+	
+	});
+</script>
+</head>
+<body>
+	<h1>----------------------------</h1>
+	<input type="button" value="버튼1"/>
+	<button>버튼2</button>	
+	<h1>----------------------------</h1>
+</body>
+</html>

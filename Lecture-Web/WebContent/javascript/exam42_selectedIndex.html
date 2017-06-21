@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function checkForm(){
+		var form = document.searchForm;
+		if(form.searchType.selectedIndex==0) {
+			alert("검색항목을 선택하세요.");
+			form.searchType.focus();
+			return false;
+		}
+		
+		/* if(form.searchWord.value==""){
+			alert("검색어를 입력하세요.");
+			return false;
+		} */
+		
+		var words = ['','제목','작성자'];
+		
+		if(form.searchWord.value == ""){
+			alert('검색할 '+words[form.searchType.selectedIndex]+'을(를) 입력하세요');
+			return false;
+		}
+		
+		if(form.searchWord.value.length <2 ){
+			alert('검색어는 2글자 이상 입력해주세요');
+			form.searchWord.focus();
+			return false;
+		}
+		
+		return true;
+	}
+</script>
+</head>
+<body>
+	<form action="" onsubmit="return checkForm()" name="searchForm">
+		<!-- name=value -> searchType=title -->
+		<select name="searchType">
+			<option value="">선택</option>
+			<option value="title">제목</option>
+			<option value="writer">작성자</option>			
+		</select>
+		
+		<input type="text" name="searchWord"/>
+		<input type="submit" value="검색"/>
+		
+	</form>
+</body>
+</html>

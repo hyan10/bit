@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('img').before('<b>전</b>');
+		$('img').after('<i>후 </i>', '<strong>맨뒤</strong>');
+/* 
+		// 안먹힌당
+		$('img').prepend('<mark>전</mark>');
+		$('img').append('<mark>후</mark>');
+ */
+ 
+	});
+</script>
+</head>
+<body>
+	<h1>hello</h1>
+	<img src="../css/images/aaa.png"/>
+	<h2>good-bye</h2>
+</body>
+</html>

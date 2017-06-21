@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var str = "console.log('hello');";
+	/* var str = 'console.log("hello")'; */   // "" 내부 문자열은 ''로, '' 내부 문자열은 ""로 하기
+	
+	str += "var number = 10;";
+	str += "console.log(number);";
+	str += "var arrays = [10,'A',12.34,true];";
+	str += "console.log(arrays.length);";
+	
+	eval(str); // 문자열 내의 자바스크립트 실행
+	
+	// eval(str) 수행으로 number 변수가 만들어져있어서 이후에도 쓸 수 있다.
+	number += 30;
+	console.log("number : "+number+"\n");
+</script>
+</head>
+<body>
+
+</body>
+</html>

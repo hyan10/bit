@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {
+		width: 100px;
+		height: 100px;
+		background: red;
+	}
+	
+</style>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+	/* 	$('div').css({
+			'width' : '100px',
+			'height' : '100px',
+			'background' : 'red'
+		}); */
+		
+		/* $('div').hide(1000);
+		$('div').show(1000);
+
+		$('div').fadeOut();
+		$('div').fadeIn(1000); */
+		
+		$('div').fadeToggle(1000);  // fadeIn 상태면 out으로, out 상태면 in으로
+		$('div').fadeToggle(1000);
+		
+		$('div').fadeTo(1000,0.4);  // 시간, 투명도 0~1
+	});
+</script>
+
+</head>
+<body>
+	<div style="width:100px; height: 100px; background: red;"></div>
+	<br/>
+	<div></div>
+</body>
+</html>

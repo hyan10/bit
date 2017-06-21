@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function Person(name, phone, addr){
+		this.name = name;
+		this.phone = phone;
+		this.addr = addr;
+	}
+	
+	Person.prototype.info = function(){
+		var list = '';
+		for(var key in this){
+			if(key != 'info'){
+				list += key+": "+this[key]+'\n';
+			}
+		}
+		console.log(list);
+	}
+	
+	Person.prototype.hobby = "영화";
+	
+	Doctor.prototype = Person.prototype;
+	
+	function Doctor(name1, phone1, addr1, major){
+	
+		// version 1.
+	/*
+		this.name=name;
+		this.phone=phone;
+		this.addr=addr;	
+	*/
+		
+	 	// version 2.
+	/*
+		this.base = Person;  // person을 복사함. 함수 복사한 형태랑 같은 의미
+		this.base(name, phone, addr);
+	 */	
+	 
+		// version 3.
+	//	Person.call(this, name1, phone1, addr1);  // Person라는 함수를 호출해서 this에 person 내 요소들이 복사됨
+		// this.name,phone,addr 이 생기는거
+				
+		// version 4.
+			Person.apply(this, arguments);  // 순서대로 person에서 필요한 인자 개수만큼 넘어감
+			
+			// this.name = "가나";  // 가능
+		
+		// this.person = new Person(name,phone,addr); 
+		this.major = major;
+	}
+	
+	var person = new Person("이름","1111","주소1");
+	person.info();
+	
+	var doctor = new Doctor("이름2","1112","주소2","신경외과");
+	doctor.info();  // prototype이 복사되었기 때문에 가능
+	
+	console.log(person instanceof Person);
+	console.log(doctor instanceof Doctor);
+	console.log(doctor instanceof Person);
+	
+	console.log(doctor.name);  // 접근 가능
+	doctor.name = "가나다";
+	console.log(doctor.name);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"
+	type="text/javascript"></script>
+<script>
+	$(document).ready(function(){
+		alert('ready');
+		
+	//	$('ul li').hide();
+	//	$('ul li:first').hide();
+	//	$('ul li:first-child').hide(); // 각 ul에서 li 첫번째
+		$('ul li:last-child').hide(); // 각 ul에서 li 첫번째
+		
+		
+	});
+</script>
+</head>
+<body>
+	<h1>동물종류</h1>
+	<ul>
+		<li>호랑이</li>
+		<li>사자</li>
+		<li>코끼리</li>
+		<li>곰</li>
+	</ul>
+
+	<h1>음식종류</h1>
+	<ul>
+		<li>떡볶이</li>
+		<li>김밥</li>
+		<li>라면</li>
+	</ul>
+
+</body>
+</html>

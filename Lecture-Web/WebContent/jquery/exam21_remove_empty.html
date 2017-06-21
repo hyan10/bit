@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {
+		border : 2px solid red;
+	}
+</style>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+
+	$(document).ready(function(){
+		$('button').click(function(){
+			// $('p').remove();
+			
+			// $('div').remove();
+		//	$('div').empty();
+			
+		//	$('#id01').remove();
+			$('#id01').empty();
+			
+		//	$('p').remove('.c01');
+		
+		//	$('p').remove('.c01, #id02');  // 가능
+			
+		//	$('p.c01').remove();  // $('p').remove('.c01');  // 같음
+			
+		});
+	});
+
+</script>
+</head>
+<body>
+	<div>
+		<p id="id01">나는 p태그 홍길동입니다</p>
+		<mark id="id03">나는 mark 김길동입니다</mark><br/>
+		나는 일반 고길동입니다
+		<p class="c01">나는 p태그 한길동입니다</p>
+	</div>
+	<p id="id02">나는 p태그 박길동입니다</p>
+	<button>삭제</button>
+	
+</body>
+</html>

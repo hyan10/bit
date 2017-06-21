@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h1 {
+		background: yellow;
+	}
+</style>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		
+	/* 
+		// 마우스가 닿았을 때
+		$('h1').mouseenter(function(){
+			$('h1').css('background-color','gray');
+		});
+		
+		// 마우스가 떼졌을 때
+		$('h1').mouseleave(function(){
+			console.log("떼졌다.");
+			$('h1').css('background-color','yellow');
+		});
+	*/
+		 	 
+		// mouseenter + mouseleave 쌍으로 쓰이기 때문에 한번에 hover를 이용
+		$('h1').hover(function(){ // mouseenter 영역
+			$('h1').css('background-color','gray');
+		}, function(){  // mouseleave 영역
+			console.log("떼졌다.");
+			$('h1').css('background-color','yellow');
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>마우스를 접근시켜보세요</h1>
+</body>
+</html>

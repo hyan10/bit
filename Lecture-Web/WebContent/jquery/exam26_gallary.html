@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img {
+		width: 100px;
+	}
+</style>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#prevBtn').click(function(){
+			
+			$('img').first().appendTo('#gallary');
+		});
+		
+		$('#nextBtn').click(function(){
+			$('img').last().prependTo('#gallary');
+		});
+		
+		// 자동으로 움직이게
+		setInterval(function(){
+			$('img').last().prependTo('#gallary');
+		},1000);
+	});
+</script>
+</head>
+<body>
+<button id="prevBtn">prev</button>
+<span id="gallary">
+	<img src="img/image01.jpg" />
+	<img class="img2" src="img/image02.jpg" />
+	<img src="img/image03.jpg" />
+	<img src="img/image04.jpg" />
+</span>
+<button id="nextBtn">next</button>
+</body>
+</html>
